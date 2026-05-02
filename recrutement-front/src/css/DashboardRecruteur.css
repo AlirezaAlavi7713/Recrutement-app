@@ -1,0 +1,74 @@
+.dashboard__header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
+
+.recruteur__layout { display: grid; grid-template-columns: 340px 1fr; gap: 1.5rem; align-items: start; }
+@media (max-width: 900px) { .recruteur__layout { grid-template-columns: 1fr; } }
+
+.offres__panel { display: flex; flex-direction: column; gap: 0.8rem; }
+.offre-item {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 1rem 1.2rem; display: flex; gap: 0.8rem; align-items: center;
+  cursor: pointer; transition: border-color 0.2s;
+}
+.offre-item:hover { border-color: var(--accent); }
+.offre-item.active { border-color: var(--accent); background: rgba(108,99,255,0.06); }
+.offre-item__info { flex: 1; }
+.offre-item__info h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+.offre-item__meta { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.3rem; }
+.offre-item__date { font-size: 0.78rem; color: var(--text-muted); }
+.offre-item__actions { display: flex; gap: 0.4rem; flex-shrink: 0; }
+
+.candidatures__panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; min-height: 300px; }
+
+.cands__header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding-bottom: 0.7rem; border-bottom: 1px solid var(--border); }
+.candidatures__title { font-size: 1rem; font-weight: 700; }
+.candidatures__title span { color: var(--text-muted); font-weight: 400; }
+
+.view-toggle { display: flex; gap: 0.3rem; }
+.view-toggle button { background: var(--bg2); border: 1px solid var(--border); color: var(--text-muted); border-radius: 6px; padding: 0.35rem 0.6rem; cursor: pointer; transition: all 0.2s; }
+.view-toggle button.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+.cands__stats { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.2rem; }
+.cand-stat { background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 0.5rem 1rem; text-align: center; min-width: 70px; }
+.cand-stat span { display: block; font-size: 1.4rem; font-weight: 800; }
+.cand-stat small { font-size: 0.72rem; color: var(--text-muted); }
+
+.kanban { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; overflow-x: auto; }
+@media (max-width: 1200px) { .kanban { grid-template-columns: repeat(2, 1fr); } }
+.kanban__col { display: flex; flex-direction: column; gap: 0.6rem; min-width: 180px; }
+.kanban__col-head { background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 0.6rem 0.8rem; font-size: 0.85rem; font-weight: 700; display: flex; justify-content: space-between; align-items: center; }
+.kanban__col-head span { background: var(--border); border-radius: 100px; padding: 0 0.4rem; font-size: 0.75rem; }
+.kanban__card { background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 0.8rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.kanban__card-info { display: flex; flex-direction: column; }
+.kanban__card-info strong { font-size: 0.85rem; }
+.kanban__card-info small { color: var(--text-muted); font-size: 0.75rem; }
+.kanban__card-actions { display: flex; gap: 0.3rem; flex-wrap: wrap; }
+.kanban__statut-select { width: 100%; background: var(--surface); border: 1px solid var(--border); color: var(--text); border-radius: 6px; padding: 0.3rem 0.4rem; font-size: 0.78rem; cursor: pointer; }
+.cand-mini__avatar { width: 32px; height: 32px; border-radius: 50%; background: var(--surface); border: 1px solid var(--accent); display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 0.8rem; overflow: hidden; }
+.cand-mini__avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+.cand-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem; margin-bottom: 1rem; }
+.cand-card__top { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 0.8rem; }
+.cand-card__avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--surface); border: 2px solid var(--accent); display: flex; align-items: center; justify-content: center; color: var(--accent); flex-shrink: 0; overflow: hidden; }
+.cand-card__avatar img { width: 100%; height: 100%; object-fit: cover; }
+.cand-card__info { flex: 1; }
+.cand-card__info h4 { font-size: 0.95rem; font-weight: 700; }
+.cand-card__info p { font-size: 0.82rem; color: var(--text-muted); }
+.cand-card__role { color: var(--accent2) !important; }
+.cand-card__actions { display: flex; gap: 0.4rem; }
+.cand-card__skills { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.6rem; }
+.cand-card__lettre { margin-bottom: 0.8rem; }
+.cand-card__lettre summary { font-size: 0.85rem; cursor: pointer; color: var(--accent2); margin-bottom: 0.5rem; }
+.cand-card__lettre p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; white-space: pre-line; }
+.cand-card__statut { display: flex; align-items: center; gap: 0.8rem; }
+.statut-select { background: var(--surface); border: 1px solid var(--border); color: var(--text); border-radius: 6px; padding: 0.35rem 0.6rem; font-size: 0.82rem; cursor: pointer; }
+
+.offre-form .form-group textarea { min-height: 150px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.modal-lg { max-width: 700px; }
+
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; z-index: 200; padding: 1rem; overflow-y: auto; }
+.modal { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; width: 100%; max-width: 560px; max-height: 90vh; overflow-y: auto; }
+.modal__head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+.modal__head h2 { font-size: 1.2rem; }
+.modal__close { background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 1.2rem; transition: color 0.2s; }
+.modal__close:hover { color: var(--danger); }

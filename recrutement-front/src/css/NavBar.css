@@ -1,0 +1,24 @@
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; gap: 2rem;
+  padding: 0 2rem; height: 60px;
+  background: rgba(15,15,23,0.95); backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.navbar__brand {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 1.1rem; font-weight: 800; color: var(--accent);
+  text-decoration: none; flex-shrink: 0;
+}
+.navbar__brand span { color: var(--text); }
+.navbar__links { display: flex; align-items: center; gap: 1.5rem; flex: 1; }
+.navbar__links a { color: var(--text-muted); font-size: 0.93rem; font-weight: 500; transition: color 0.2s; text-decoration: none; }
+.navbar__links a:hover, .navbar__links a.active { color: var(--text); }
+.navbar__actions { display: flex; align-items: center; gap: 0.8rem; margin-left: auto; }
+.navbar__avatar {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: var(--surface); border: 2px solid var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent); overflow: hidden; cursor: pointer;
+}
+.navbar__avatar img { width: 100%; height: 100%; object-fit: cover; }

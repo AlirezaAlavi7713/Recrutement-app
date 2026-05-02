@@ -1,0 +1,34 @@
+.profil-page { max-width: 600px; }
+
+.profil__avatar-section { margin-bottom: 2rem; }
+.profil__avatar-wrap { display: flex; align-items: center; gap: 1.5rem; }
+.profil__avatar {
+  width: 80px; height: 80px; border-radius: 50%;
+  background: var(--surface); border: 3px solid var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent); font-size: 2rem; overflow: hidden; flex-shrink: 0;
+}
+.profil__avatar img { width: 100%; height: 100%; object-fit: cover; }
+.profil__avatar-btn { cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.45rem 1rem; border-radius: var(--radius); font-size: 0.85rem; font-weight: 600; background: transparent; color: var(--text); border: 1.5px solid var(--border); transition: all 0.2s; }
+.profil__avatar-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+.profil__tabs { display: flex; gap: 0; margin-bottom: 1.5rem; border-bottom: 2px solid var(--border); }
+.tab { background: none; border: none; color: var(--text-muted); padding: 0.7rem 1.5rem; font-size: 0.9rem; font-weight: 600; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.2s; }
+.tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+.tab:hover { color: var(--text); }
+
+.cv-section { padding: 1.5rem; }
+.cv-empty { color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.2rem; }
+.cv-upload-btn { cursor: pointer; margin-top: 1rem; }
+
+.cv-file {
+  display: flex; align-items: center; gap: 1rem;
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1rem 1.2rem; margin-bottom: 0.5rem;
+}
+.cv-file__icon { font-size: 2rem; color: var(--danger); flex-shrink: 0; }
+.cv-file__info { flex: 1; min-width: 0; }
+.cv-file__name { display: block; font-size: 0.88rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cv-file__label { display: block; font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }

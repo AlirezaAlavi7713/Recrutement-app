@@ -1,0 +1,35 @@
+.offre-back { margin-bottom: 1.5rem; }
+
+.offre-detail__layout {
+  display: grid; grid-template-columns: 1fr 280px; gap: 1.5rem; align-items: start;
+}
+@media (max-width: 768px) { .offre-detail__layout { grid-template-columns: 1fr; } }
+
+.offre-detail__header { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.5rem; }
+.offre-detail__logo {
+  width: 64px; height: 64px; border-radius: 14px; background: var(--bg2);
+  border: 1px solid var(--border); display: flex; align-items: center; justify-content: center;
+  color: var(--accent); font-size: 1.6rem; flex-shrink: 0; overflow: hidden;
+}
+.offre-detail__logo img { width: 100%; height: 100%; object-fit: contain; }
+.offre-detail__company { color: var(--text-muted); margin: 0.3rem 0 0.6rem; }
+.offre-detail__meta { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.offre-detail__salary { color: var(--success); font-size: 0.95rem; margin-bottom: 1.5rem; }
+.offre-detail__section { margin-top: 1.5rem; }
+.offre-detail__section h2 { font-size: 1.1rem; margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+.offre-detail__desc { color: var(--text-muted); line-height: 1.8; white-space: pre-line; }
+.offre-detail__skills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.offre-detail__link { color: var(--accent2); font-size: 0.9rem; display: inline-block; margin-top: 0.5rem; }
+
+.modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px);
+  display: flex; align-items: center; justify-content: center; z-index: 200; padding: 1rem;
+}
+.modal {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 2rem; width: 100%; max-width: 560px;
+}
+.modal__head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+.modal__head h2 { font-size: 1.2rem; }
+.modal__close { background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 1.2rem; transition: color 0.2s; }
+.modal__close:hover { color: var(--danger); }
