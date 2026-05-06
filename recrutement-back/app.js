@@ -16,6 +16,7 @@ import adminRoutes from "./routes/admin.js";
 const app = express();
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
+app.set("trust proxy", 1);
 app.use(helmet());
 app.use(cors({ origin: process.env.FRONTEND_URL || "*" }));
 app.use(express.json());
