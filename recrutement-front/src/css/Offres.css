@@ -3,7 +3,7 @@
 
 .offres__filters {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr auto;
+  grid-template-columns: 2fr 1fr 1fr 2fr auto;
   gap: 0.75rem;
   align-items: center;
   background: var(--surface);
@@ -15,7 +15,7 @@
 
 .filter-search { position: relative; }
 .filter-search input {
-  width: 100%; padding: 0.8rem 0.9rem 0.8rem 2.5rem;
+  width: 100%; padding: 1rem 0.9rem 1rem 2.5rem;
   background: var(--bg2); border: 1.5px solid var(--border);
   color: var(--text); border-radius: var(--radius);
   font-size: 1rem; outline: none; transition: border-color 0.2s;
@@ -25,7 +25,7 @@
 
 .offres__filters select,
 .offres__filters input[type="text"] {
-  width: 100%; padding: 0.8rem 0.9rem;
+  width: 100%; padding: 1rem 0.9rem;
   background: var(--bg2); border: 1.5px solid var(--border);
   color: var(--text); border-radius: var(--radius);
   font-size: 0.9rem; outline: none;
