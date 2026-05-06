@@ -55,7 +55,7 @@ export default function Offres() {
         <select value={filters.domaine} onChange={set("domaine")}>
           {DOMAINES.map(d => <option key={d} value={d}>{d || "Tous les domaines"}</option>)}
         </select>
-        <input value={filters.ville} onChange={set("ville")} placeholder="Ville..." />
+        <input className="filter-ville" value={filters.ville} onChange={set("ville")} placeholder="Ville..." />
         <button type="submit" className="btn btn-primary"><FaFilter /> Filtrer</button>
       </form>
 
