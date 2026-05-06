@@ -1,7 +1,7 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { useAuth } from "../context/useAuth";
-import { FaBriefcase, FaUser, FaSignOutAlt, FaEnvelope } from "react-icons/fa";
+import { FaBriefcase, FaUser, FaSignOutAlt, FaEnvelope, FaSearch, FaTachometerAlt, FaClipboardList, FaShieldAlt } from "react-icons/fa";
 import "../css/NavBar.css";
 
 export default function NavBar() {
@@ -69,23 +69,21 @@ export default function NavBar() {
 
       {/* Mobile menu */}
       <div className={`navbar__mobile ${menuOpen ? "open" : ""}`}>
-        <Link to="/offres" className={active("/offres")} onClick={close}>Offres</Link>
-        {user?.role === "recruteur" && <Link to="/dashboard/recruteur" className={active("/dashboard/recruteur")} onClick={close}>Dashboard</Link>}
-        {user?.role === "candidat" && <Link to="/dashboard/candidat" className={active("/dashboard/candidat")} onClick={close}>Mes candidatures</Link>}
-        {user?.role === "admin" && <Link to="/dashboard/admin" className={active("/dashboard/admin")} onClick={close}>Admin</Link>}
-        {user && <Link to="/messages" className={active("/messages")} onClick={close}><FaEnvelope /></Link>}
+        <Link to="/offres" className={active("/offres")} onClick={close}><FaSearch /> Offres</Link>
+        {user?.role === "recruteur" && <Link to="/dashboard/recruteur" className={active("/dashboard/recruteur")} onClick={close}><FaTachometerAlt /> Dashboard</Link>}
+        {user?.role === "candidat" && <Link to="/dashboard/candidat" className={active("/dashboard/candidat")} onClick={close}><FaClipboardList /> Mes candidatures</Link>}
+        {user?.role === "admin" && <Link to="/dashboard/admin" className={active("/dashboard/admin")} onClick={close}><FaShieldAlt /> Admin</Link>}
+        {user && <Link to="/messages" className={active("/messages")} onClick={close}><FaEnvelope /> Messages</Link>}
         <div className="navbar__mobile-actions">
           {user ? (
             <>
-              <Link to="/profil" className="navbar__avatar" onClick={close}>
-                {user.avatar_url ? <img src={`${import.meta.env.VITE_API_URL}${user.avatar_url}`} alt="avatar" /> : <FaUser />}
-              </Link>
-              <button onClick={handleLogout} className="btn btn-secondary btn-sm"><FaSignOutAlt /></button>
+              <Link to="/profil" className="btn btn-secondary" onClick={close}><FaUser /> Mon profil</Link>
+              <button onClick={handleLogout} className="btn btn-secondary"><FaSignOutAlt /> Déconnexion</button>
             </>
           ) : (
             <>
-              <Link to="/login" className="btn btn-secondary btn-sm" onClick={close}>Connexion</Link>
-              <Link to="/register" className="btn btn-primary btn-sm" onClick={close}>S'inscrire</Link>
+              <Link to="/login" className="btn btn-secondary" onClick={close}>Connexion</Link>
+              <Link to="/register" className="btn btn-primary" onClick={close}>S'inscrire</Link>
             </>
           )}
         </div>
