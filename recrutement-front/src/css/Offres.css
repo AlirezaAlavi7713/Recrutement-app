@@ -36,7 +36,6 @@
 @media (max-width: 768px) {
   .offres__filters { grid-template-columns: 1fr 1fr; }
   .filter-search { grid-column: 1 / -1; }
-  .offres__filters input[type="text"] { grid-column: 1 / -1; }
   .offres__filters .btn { grid-column: 1 / -1; width: 100%; justify-content: center; }
 }
 
