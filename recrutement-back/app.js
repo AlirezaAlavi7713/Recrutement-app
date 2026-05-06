@@ -33,4 +33,9 @@ app.use("/api/messages", messagesRoutes);
 app.use("/api/profil", profilRoutes);
 app.use("/api/admin", adminRoutes);
 
+app.use((err, req, res, next) => {
+  console.error("[GLOBAL ERROR]", err.message, err.stack);
+  res.status(500).json({ message: "Erreur serveur", detail: err.message });
+});
+
 export default app;
