@@ -3,7 +3,7 @@
 
 .offres__filters {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr auto auto;
+  grid-template-columns: 2fr 1fr 1fr 1fr auto;
   gap: 0.75rem;
   align-items: center;
   background: var(--surface);
@@ -15,31 +15,28 @@
 
 .filter-search { position: relative; }
 .filter-search input {
-  width: 100%; padding: 0.65rem 0.9rem 0.65rem 2.5rem;
+  width: 100%; padding: 0.8rem 0.9rem 0.8rem 2.5rem;
   background: var(--bg2); border: 1.5px solid var(--border);
   color: var(--text); border-radius: var(--radius);
-  font-size: 0.95rem; outline: none; transition: border-color 0.2s;
+  font-size: 1rem; outline: none; transition: border-color 0.2s;
 }
 .filter-search input:focus { border-color: var(--accent); }
-.filter-icon { position: absolute; left: 0.85rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); }
+.filter-icon { position: absolute; left: 0.85rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 1rem; }
 
 .offres__filters select,
 .offres__filters input[type="text"] {
-  width: 100%; padding: 0.65rem 0.9rem;
+  width: 100%; padding: 0.8rem 0.9rem;
   background: var(--bg2); border: 1.5px solid var(--border);
   color: var(--text); border-radius: var(--radius);
   font-size: 0.9rem; outline: none;
 }
 
-.offres__filters .btn {
-  white-space: nowrap;
-}
+.offres__filters .btn { white-space: nowrap; }
 
 @media (max-width: 768px) {
-  .offres__filters {
-    grid-template-columns: 1fr 1fr;
-  }
+  .offres__filters { grid-template-columns: 1fr 1fr; }
   .filter-search { grid-column: 1 / -1; }
+  .offres__filters input[type="text"] { grid-column: 1 / -1; }
   .offres__filters .btn { grid-column: 1 / -1; width: 100%; justify-content: center; }
 }
 
