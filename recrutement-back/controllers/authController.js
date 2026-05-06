@@ -43,8 +43,9 @@ export const register = async (req, res) => {
     );
 
     res.status(201).json({ token, user: { id: userId, nom, prenom, email, role } });
-  } catch {
-    res.status(500).json({ message: "Erreur serveur" });
+  } catch (err) {
+    console.error("[register]", err.message, err.stack);
+    res.status(500).json({ message: "Erreur serveur", detail: err.message });
   }
 };
 
