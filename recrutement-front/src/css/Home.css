@@ -65,7 +65,11 @@
 .badge-icon { font-size: 1.4rem; }
 .badge-icon.green { color: var(--success); }
 .badge-icon.purple { color: var(--accent); }
-@media (max-width: 900px) { .hero__image-wrap { display: none; } }
+@media (max-width: 900px) {
+  .hero__image-wrap { display: block; }
+  .hero__img { height: 260px; }
+  .hero__badge { display: none; }
+}
 
 /* ── STATS ── */
 .home__stats {
