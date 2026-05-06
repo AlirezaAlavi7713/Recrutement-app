@@ -40,6 +40,7 @@
 }
 .btn-outline:hover { border-color: var(--accent); color: var(--accent); background: rgba(108,99,255,0.08); }
 .hero__trust { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
+.hero__trust-item { display: flex; align-items: center; gap: 0.4rem; }
 .hero__trust svg { color: var(--success); }
 .hero__trust span { font-size: 0.88rem; color: var(--text-muted); }
 

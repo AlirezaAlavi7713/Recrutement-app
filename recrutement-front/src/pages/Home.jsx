@@ -57,9 +57,9 @@ export default function Home() {
               {user?.role === "recruteur" && <Link to="/dashboard/recruteur" className="btn btn-outline btn-lg">Mon dashboard</Link>}
             </div>
             <div className="hero__trust">
-              <FaCheckCircle /> <span>Gratuit</span>
-              <FaCheckCircle /> <span>Sans engagement</span>
-              <FaCheckCircle /> <span>Réponse rapide</span>
+              <div className="hero__trust-item"><FaCheckCircle /> <span>Gratuit</span></div>
+              <div className="hero__trust-item"><FaCheckCircle /> <span>Sans engagement</span></div>
+              <div className="hero__trust-item"><FaCheckCircle /> <span>Réponse rapide</span></div>
             </div>
           </motion.div>
 
